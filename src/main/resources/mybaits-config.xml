@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true" />             <!--  一级缓存是sql语句的缓存自动开始   二级缓存 缓存结果对象-->
+		<setting name="lazyLoadingEnabled" value="true" />
+		<setting name="multipleResultSetsEnabled" value="true" />
+		<setting name="useColumnLabel" value="true" />
+		<setting name="defaultExecutorType" value="REUSE" />
+		<setting name="defaultStatementTimeout" value="25000" />
+	</settings>
+	
+    <typeAliases>
+      <!--
+      通过package, 可以直接指定package的名字， mybatis会自动扫描你指定包下面的javabean,
+      并且默认设置一个别名，默认的名字为： javabean 的首字母小写的非限定类名来作为它的别名。
+      也可在javabean 加上注解@Alias 来自定义别名， 例如： @Alias(user) 
+      <package name="com.dy.entity"/>
+       -->
+     <!--  <typeAlias alias="user" type="com.igxcms.manage.model.User"/>
+       <typeAlias alias="action" type="com.igxcms.manage.model.Action"/>
+         <typeAlias alias="group" type="com.igxcms.manage.model.Group"/>
+            <typeAlias alias="comment" type="com.igxcms.manage.model.Comment"/>
+                <typeAlias alias="model" type="com.igxcms.manage.model.Model"/>
+                
+                  <typeAlias alias="admin" type="com.igxcms.manage.model.Admin"/>
+                    <typeAlias alias="guestbookctg" type="com.igxcms.manage.model.Guestbookctg"/> -->
+                    
+                       <!--  <typeAlias alias="sensitivectg" type="com.igxcms.manage.model.SensitiveCtg"/> -->
+  
+  </typeAliases>
+  
+
+  
+
+</configuration>
