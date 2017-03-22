@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>网站后台内容管理系统登录登陆界面模板 - 站长素材</title>
+<title>大数据系统登录</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
@@ -14,7 +14,7 @@
 <body>
 
 <div class="login">
-<form action="login" method="post" id="form">
+<form action="admin/login" method="post" id="form">
 	<div class="logo"></div>
     <div class="login_form">
     	<div class="user">

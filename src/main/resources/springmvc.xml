@@ -20,7 +20,7 @@
 	
 	
 	<!-- 直接转发的界面11 ,无需经过Handle-->
-	<mvc:view-controller path="/index.do" view-name="index" />
+	<mvc:view-controller path="/index" view-name="index" />
 	<mvc:view-controller path="/gallery.do" view-name="gallery" />
 	<mvc:view-controller path="/test.do" view-name="test" />
 	<mvc:view-controller path="/upload.do" view-name="upload" />
@@ -31,8 +31,8 @@
 
     
 	 <!-- 过滤静态资源 -->
-	<mvc:resources location="/assets/" mapping="/assets/**" />
-	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/public/" mapping="/public/**" />
+	<mvc:resources location="/dataView/" mapping="/dataView/**" />
 	<mvc:resources location="/image/" mapping="/image/**" />
 	<mvc:resources location="/js/" mapping="/js/**" />
 	<mvc:resources location="/kindeditor/" mapping="/kindeditor/**" />

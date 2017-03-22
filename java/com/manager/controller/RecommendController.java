@@ -25,7 +25,8 @@ import com.manager.untils.Recommend;
 public class RecommendController {
 	@Autowired
 	private RecommendService rservice;
-	@RequestMapping(value="/index")
+	
+	@RequestMapping(value="/recommendIndex")
 	public ModelAndView index(HttpServletRequest request){
 		ModelAndView mav=new ModelAndView("/recommend/index");
 		return mav;

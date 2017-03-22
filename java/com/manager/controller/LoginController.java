@@ -21,26 +21,24 @@ public class LoginController {
 	@Autowired
 	private UserService userservice;
 
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String index() {
-
-		return "login";
-	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public ModelAndView login(HttpSession httpsession, HttpServletRequest request, User u) {
-		ModelAndView mav = null;
-		User user = this.userservice.findbyname(u.getUsername());
-		if (user == null) {
-			mav = new ModelAndView("login");
+	public String login(HttpSession httpsession, HttpServletRequest request, User userInput) {
+		System.out.println("login"+userInput);
+		
+		User userInTable = this.userservice.findbyname(userInput.getUsername());
+		if (userInTable == null) {
+			return "index";
 		} else {
-			if (user.getPassword().equals(Md5Utils.md5(u.getPassword()))) {
-				httpsession.setAttribute("username", u.getUsername());
-				httpsession.setAttribute("userid", u.getId());
-				mav = new ModelAndView("redirect:/recommend/index");
+			if (userInTable.getPassword().equals(Md5Utils.md5(userInput.getPassword()))) {
+				httpsession.setAttribute("username", userInput.getUsername());
+				httpsession.setAttribute("userid", userInput.getId());
+				return "recommendIndex";
+			}else{
+				return "index";
 			}
 		}
-		return mav;
+		
 	}
 
 }
