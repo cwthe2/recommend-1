@@ -16,7 +16,7 @@ import com.manager.service.UserService;
 import com.manager.untils.Md5Utils;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/admin")
 public class LoginController {
 	@Autowired
 	private UserService userservice;
