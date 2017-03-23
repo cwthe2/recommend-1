@@ -25,7 +25,7 @@
 
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="index.html" class="logo">kode</a>
+      <a href="index.html" class="logo">大数据管理系统</a>
     </div>
     <!-- End App Logo -->
 
@@ -50,15 +50,11 @@
     <ul class="top-right">
 
     <li class="dropdown link">
-      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="${pageContext.request.contextPath}/dataView/img/profileimg.png" alt="img"><b>Jonathan Doe</b><span class="caret"></span></a>
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="${pageContext.request.contextPath}/dataView/img/profileimg.png" alt="img"><b>gxu</b><span class="caret"></span></a>
         <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
-          <li role="presentation" class="dropdown-header">Profile</li>
-          <li><a href="#"><i class="fa falist fa-inbox"></i>Inbox<span class="badge label-danger">4</span></a></li>
-          <li><a href="#"><i class="fa falist fa-file-o"></i>Files</a></li>
-          <li><a href="#"><i class="fa falist fa-wrench"></i>Settings</a></li>
-          <li class="divider"></li>
-          <li><a href="#"><i class="fa falist fa-lock"></i> Lockscreen</a></li>
-          <li><a href="#"><i class="fa falist fa-power-off"></i> Logout</a></li>
+          
+          <li><a href="#"><i class="fa falist fa-wrench"></i>设置</a></li>
+          <li><a href="#"><i class="fa falist fa-power-off"></i> 注销</a></li>
         </ul>
     </li>
 
@@ -75,49 +71,49 @@
 <div class="sidebar clearfix">
 
 <ul class="sidebar-panel nav">
-  <li class="sidetitle">MAIN</li>
-  <li><a href="index.html"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard<span class="label label-default">2</span></a></li>
-  <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>UI Elements<span class="caret"></span></a>
+
+  <li><a href="#"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
+  <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>模型训练<span class="caret"></span></a>
     <ul>
-      <li><a href="icons.html">Icons</a></li>
-      <li><a href="tabs.html">Tabs</a></li>
-      <li><a href="buttons.html">Buttons</a></li>
-      <li><a href="panels.html">Panels</a></li>
-      <li><a href="notifications.html">Notifications</a></li>
-      <li><a href="modal-boxes.html">Modal Boxes</a></li>
-      <li><a href="progress-bars.html">Progress Bars</a></li>
-      <li><a href="others.html">Others<span class="label label-danger">NEW</span></a></li>
+      <li><a href="#">ALS</a></li>
+      <li><a href="#">逻辑回归</a></li>
+      <li><a href="#">决策树</a></li>
+      <li><a href="#">随机森林</a></li>
+      <li><a href="#">SVM</a></li>
+      <li><a href="#">朴素贝叶斯</a></li>
+      <li><a href="#">K最近邻</a></li>
+    
     </ul>
   </li>
-  <li><a href="charts.html"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>Charts</a></li>
-  <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>Tables<span class="caret"></span></a>
+  <li><a href="charts.html"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
+  <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>推荐<span class="caret"></span></a>
     <ul>
-      <li><a href="basic-table.html">Basic Tables</a></li>
-      <li><a href="data-table.html">Data Tables</a></li>
+      <li><a href="#">景区</a></li>
+      <li><a href="#">商品</a></li>
     </ul>
   </li>
-  <li><a href="#"><span class="icon color10"><i class="fa fa-check-square-o"></i></span>Forms<span class="caret"></span></a>
+  <li><a href="#"><span class="icon color10"><i class="fa fa-check-square-o"></i></span>推荐参数设置<span class="caret"></span></a>
     <ul>
-      <li><a href="form-elements.html">Form Elements</a></li>
-      <li><a href="layouts.html">Form Layouts</a></li>
-      <li><a href="text-editors.html">Text Editors</a></li>
+      <li><a href="#">lambdas</a></li>
+      <li><a href="#">ranks</a></li>
+      <li><a href="#">numIters</a></li>
     </ul>
   </li>
 </ul>
 
 <ul class="sidebar-panel nav">
-  <li class="sidetitle">MORE</li>
-  <li><a href="maps.html"><span class="icon color7"><i class="fa fa-map-marker"></i></span>Maps</a></li>
-  <li><a href="helper-classes.html"><span class="icon color8"><i class="fa fa-code"></i></span>Helper Classes</a></li>
+  <li class="sidetitle">更多</li>
+  <li><a href="maps.html"><span class="icon color7"><i class="fa fa-map-marker"></i></span>地理位置</a></li>
+  <li><a href="helper-classes.html"><span class="icon color8"><i class="fa fa-code"></i></span>开发者</a></li>
 </ul>
 
 <div class="sidebar-plan">
-  Pro Plan<a href="#" class="link">Upgrade</a>
+  数据空间<a href="#" class="link">扩容</a>
   <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
   </div>
 </div>
-<span class="space">42 GB / 100 GB</span>
+<span class="space">1600 GB / 2048 GB</span>
 </div>
 
 </div>
@@ -130,15 +126,13 @@
 
   <!-- Start Page Header -->
   <div class="page-header">
-    <h1 class="title">Dashboard</h1>
-      <ol class="breadcrumb">
-        <li class="active">This is a quick overview of some features</li>
-    </ol>
+    <h1 class="title">数据面板</h1>
+      
 
     <!-- Start Page Header Right Div -->
     <div class="right">
       <div class="btn-group" role="group" aria-label="...">
-        <a href="index.html" class="btn btn-light">Dashboard</a>
+      
         <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i></a>
         <a href="#" class="btn btn-light"><i class="fa fa-search"></i></a>
         <a href="#" class="btn btn-light" id="topstats"><i class="fa fa-line-chart"></i></a>
@@ -166,17 +160,17 @@
       <div class=" panel-widget widget chart-with-stats clearfix" style="height:450px;">
 
         <div class="col-sm-12" style="height:450px;">
-          <h4 class="title">TODAY SALES<small>Last update: 1 Hours ago</small></h4>
-          <div class="top-label"><h2>11.291</h2><h4>Today Total</h4></div>
+          <h4 class="title">人群特征分布<small>上次更新：5分钟之前</small></h4>
+          <div class="top-label"><h2>1.5万</h2><h4>总人数</h4></div>
           <div class="bigchart" id="todaysales"></div>
         </div>
         <div class="right" style="height:450px;">
-          <h4 class="title">PAGE VIEW</h4>
+          <h4 class="title">趋势表示</h4>
           <!-- start stats -->
           <ul class="widget-inline-list clearfix">
-            <li class="col-12"><span>962</span>Themeforest<i class="chart sparkline-green"></i></li>
-            <li class="col-12"><span>367</span>Codecanyon<i class="chart sparkline-blue"></i></li>
-            <li class="col-12"><span>92</span>Photodune<i class="chart sparkline-red"></i></li>
+            <li class="col-12"><span>9620</span>青壮年（18-35）<i class="chart sparkline-green"></i></li>
+            <li class="col-12"><span>3670</span>少年、儿童（7-18）<i class="chart sparkline-blue"></i></li>
+            <li class="col-12"><span>2050</span>中老年（40-70）<i class="chart sparkline-red"></i></li>
           </ul>
           <!-- end stats -->
         </div>
@@ -184,29 +178,17 @@
 
       </div>
     </div>
-    <!-- End Chart Daily -->
-
-
-    <!-- Start Files -->
-    <!-- End Files -->
+   
 
   </div>  
-  <!-- End First Row -->
 
-
-  <!-- Start Second Row -->
   <div class="row">
-
-
-
-    <!-- Start Today Activity -->
-    <!-- End Today Activity -->
 
     <!-- Start Server Status -->
     <div class="col-md-12 col-lg-12">
       <div class="panel panel-widget" style="height:380px;">
         <div class="panel-title">
-          SERVER STATUS <span class="label label-default">196</span>
+       <span class="label label-default">实时人流量 </span>
           <ul class="panel-tools panel-tools-hover">
             <li><a class="icon"><i class="fa fa-refresh"></i></a></li>
             <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
@@ -215,10 +197,10 @@
         <div class="panel-body">
 
           <ul class="widget-inline-list clearfix">
-            <li class="col-3 color10"><span>28.9GB</span>Total Usage</li>
-            <li class="col-3"><span>92%</span>Space Left</li>
-            <li class="col-3 color7"><span>22%</span>CPU</li>
-            <li class="col-3"><span>512MB</span>Total RAM</li>
+            <li class="col-3 color10"><span>13000</span>总人数</li>
+            <li class="col-3"><span>72%</span>青年</li>
+            <li class="col-3 color7"><span>20%</span>儿童</li>
+            <li class="col-3"><span>8%</span>老年</li>
           </ul>
 
           <div id="realtime" class="flotchart-placeholder" style="height:190px;"></div>
@@ -228,20 +210,8 @@
     </div>
     <!-- End Server Status -->
 
-    <!-- Start Profile Widget -->
-    <!-- End Profile Widget -->
-
-
   </div>
   <!-- End Second Row -->
-
-
-  <!-- Start Third Row -->
-  <!-- End Third Row -->
-
-
-  <!-- Start Fourth Row -->
-  <!-- End Fourth Row -->
 
 
   <!-- Start Fifth Row -->
@@ -252,7 +222,7 @@
     <div class="col-md-12 col-lg-12">
       <div class="panel panel-widget">
         <div class="panel-title">
-          Projects Stats <span class="label label-info">62</span>
+          景区人流量预警<span class="label label-info">5</span>
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
@@ -273,41 +243,41 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                <td>ID</td>
-                <td>Project</td>
-                <td>Status</td>
-                <td class="text-right">Progress</td>
+                <td>景区ID</td>
+                <td>景区名</td>
+                <td>状态</td>
+                <td class="text-right">趋势</td>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>965</td>
-                <td>Kode Dashboard Template</td>
-                <td><span class="label label-default">Developing</span></td>
+                <td>银子岩</td>
+                <td><span class="label label-default">普通</span></td>
                 <td class="text-right"><span class="demo-project-stats"></span></td>
               </tr>
               <tr>
                 <td>620</td>
-                <td>EBI iOS Application</td>
-                <td><span class="label label-warning">Design</span></td>
+                <td>印象刘三姐</td>
+                <td><span class="label label-warning">警告</span></td>
                 <td class="text-right"><span class="demo-project-stats"></span></td>
               </tr>
               <tr>
                 <td>621</td>
-                <td>Kode Landing Page</td>
-                <td><span class="label label-info">Testing</span></td>
+                <td>遇龙河</td>
+                <td><span class="label label-info">良好</span></td>
                 <td class="text-right"><span class="demo-project-stats"></span></td>
               </tr>
               <tr>
-                <td>621</td>
-                <td>John Coffe Shop Logo</td>
-                <td><span class="label label-danger">Canceled</span></td>
+                <td>624</td>
+                <td>西街</td>
+                <td><span class="label label-danger">危险</span></td>
                 <td class="text-right"><span class="demo-project-stats"></span></td>
               </tr>
               <tr>
-                <td>621</td>
-                <td>BKM Website Design</td>
-                <td><span class="label label-primary">Reply waiting</span></td>
+                <td>639</td>
+                <td>兴坪</td>
+                <td><span class="label label-primary">拥挤</span></td>
                 <td class="text-right"><span class="demo-project-stats"></span></td>
               </tr>
             </tbody>
@@ -318,13 +288,6 @@
     </div>
     <!-- Start Project Stats -->
 
-
-    <!-- Start BlogPost -->
-    <!-- End BlogPost -->
-
-
-    <!-- Start Teammates -->
-    <!-- End Teammates -->
 
 
   </div>
@@ -339,12 +302,10 @@
 
 <!-- Start Footer -->
 <div class="row footer">
-  <div class="col-md-6 text-left">
-  Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+  <div class="col-md-12 text-center">
+  Copyright &copy; 2017.Guangxi University All rights reserved.<a target="_blank" href="#"></a>
   </div>
-  <div class="col-md-6 text-right">
-    Design and Developed by 站长素材
-  </div> 
+  
 </div>
 <!-- End Footer -->
 
