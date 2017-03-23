@@ -21,7 +21,7 @@ import com.manager.untils.Recommend;
 //test
 
 @Controller
-@RequestMapping(value="/recommend")
+
 public class RecommendController {
 	@Autowired
 	private RecommendService rservice;
