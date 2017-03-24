@@ -25,22 +25,27 @@ import com.manager.untils.Recommend;
 public class RecommendController {
 	@Autowired
 	private RecommendService rservice;
-	
-	@RequestMapping(value="/recommendIndex")
-	public ModelAndView index(HttpServletRequest request){
-		ModelAndView mav=new ModelAndView("/recommend/index");
-		return mav;
+	@RequestMapping("listScenic")
+	public String listScenic(HttpServletRequest request,HttpSession session){
+		System.out.println("userid:"+session.getAttribute("userid"));
 		
+		return "listScenic";
 	}
-	@RequestMapping(value="/train",method=RequestMethod.POST)
-	public ModelAndView train(HttpServletRequest request,HttpSession session){
-		ModelAndView mav=new ModelAndView();
-		int num=Integer.parseInt(request.getParameter("numResult").toString());
+	
+	@RequestMapping(value="/trainALS")
+	public void train(HttpServletRequest request,HttpSession session){
+		
+		//int num=Integer.parseInt(request.getParameter("numResult").toString());
+		int num=4;
+		
 		Recommend recommend=new Recommend();
+	
 		MatrixFactorizationModel sameModel = MatrixFactorizationModel.load(recommend.sc.sc(),
 				"hdfs://172.18.16.237:9000//user/fansy");
 		if(sameModel!=null){
+			recommend.splitData("hdfs://172.18.16.237:9000//user/root//ratings.dat", "hdfs://172.18.16.237:9000//user/root//movies.dat");
 			List<Rating> result=new ArrayList<Rating>();
+			System.out.println("session.getAttribute(userid):"+session.getAttribute("userid"));
 			result=recommend.recommendationsResult(Integer.parseInt(session.getAttribute("userid").toString()), sameModel, recommend.getRatings(),
 															recommend.getProducts(), num);
 			
@@ -54,7 +59,6 @@ public class RecommendController {
 			}
 			
 			
-			 mav=new ModelAndView("");
 			 
 		}else{
 			//接收字符串转为数组
@@ -105,7 +109,7 @@ public class RecommendController {
 			}
 		}
 	
-		return mav;
+		
 	}
 
 	

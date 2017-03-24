@@ -16,7 +16,7 @@ import com.manager.service.UserService;
 import com.manager.untils.Md5Utils;
 
 @Controller
-@RequestMapping("/admin")
+
 public class LoginController {
 	@Autowired
 	private UserService userservice;
@@ -31,8 +31,9 @@ public class LoginController {
 			return "index";
 		} else {
 			if (userInTable.getPassword().equals(Md5Utils.md5(userInput.getPassword()))) {
-				httpsession.setAttribute("username", userInput.getUsername());
-				httpsession.setAttribute("userid", userInput.getId());
+				httpsession.setAttribute("username", userInTable.getUsername());
+				httpsession.setAttribute("userid", userInTable.getId());
+				System.out.println("id:"+userInTable.getId());
 				return "recommendIndex";
 			}else{
 				return "index";
