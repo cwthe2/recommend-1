@@ -24,9 +24,10 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(HttpSession httpsession, HttpServletRequest request, User userInput) {
-		System.out.println("login"+userInput);
+		System.out.println("login"+userInput.getUsername());
 		
-		User userInTable = this.userservice.findbyname(userInput.getUsername());
+		User userInTable = userservice.findbyname(userInput.getUsername());
+		System.out.println("userInTable:"+userInTable);
 		if (userInTable == null) {
 			return "index";
 		} else {

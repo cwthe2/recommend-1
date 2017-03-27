@@ -12,7 +12,8 @@
 
   <!-- ========== Css Files =============== -->
   <link href="${pageContext.request.contextPath}/dataView/css/root.css" rel="stylesheet">
-
+ <script src="${pageContext.request.contextPath}/loading/js/prefixfree.min.js"></script>
+ <link href="${pageContext.request.contextPath}/loading/css/load.css" rel="stylesheet">
 
   </head>
   <body>
@@ -25,7 +26,7 @@
 
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="#" class="logo">大数据管理系统</a>
+      <a href="index.html" class="logo">大数据管理系统</a>
     </div>
     <!-- End App Logo -->
 
@@ -72,10 +73,10 @@
 
 <ul class="sidebar-panel nav">
 
-  <li><a href="test"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
+  <li><a href="#"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
   <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>模型训练<span class="caret"></span></a>
     <ul>
-      <li><a href="progress-bars" >ALS</a></li>
+      <li><a href="trainALS">ALS</a></li>
       <li><a href="#">逻辑回归</a></li>
       <li><a href="#">决策树</a></li>
       <li><a href="#">随机森林</a></li>
@@ -85,10 +86,10 @@
     
     </ul>
   </li>
-  <li><a href="test"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
+  <li><a href="#"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
   <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>推荐<span class="caret"></span></a>
     <ul>
-      <li><a href="scenicList">景区</a></li>
+      <li><a href="listScenic">景区</a></li>
       <li><a href="#">商品</a></li>
       <li><a href="#">路线</a></li>
       <li><a href="#">想结识的人</a></li>
@@ -149,151 +150,37 @@
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
 <div class="container-widget">
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+<h1 class="title">loading...</h1>
+ <div class="loader">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
 
-  <!-- Start Top Stats -->
-  <!-- End Top Stats -->
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
 
-
-  <!-- Start First Row -->
-  <div class="row">
-
-    <!-- Start Chart Daily -->
-    <div class="col-md-12 col-lg-12">
-      <div class=" panel-widget widget chart-with-stats clearfix" style="height:450px;">
-
-        <div class="col-sm-12" style="height:450px;">
-          <h4 class="title">人群特征分布<small>上次更新：5分钟之前</small></h4>
-          <div class="top-label"><h2>1.5万</h2><h4>总人数</h4></div>
-          <div class="bigchart" id="todaysales"></div>
-        </div>
-        <div class="right" style="height:450px;">
-          <h4 class="title">趋势表示</h4>
-          <!-- start stats -->
-          <ul class="widget-inline-list clearfix">
-            <li class="col-12"><span>9620</span>青壮年（18-35）<i class="chart sparkline-green"></i></li>
-            <li class="col-12"><span>3670</span>少年、儿童（7-18）<i class="chart sparkline-blue"></i></li>
-            <li class="col-12"><span>2050</span>中老年（40-70）<i class="chart sparkline-red"></i></li>
-          </ul>
-          <!-- end stats -->
-        </div>
-
-
-      </div>
-    </div>
-   
-
-  </div>  
-
-  <div class="row">
-
-    <!-- Start Server Status -->
-    <div class="col-md-12 col-lg-12">
-      <div class="panel panel-widget" style="height:380px;">
-        <div class="panel-title">
-       <span class="label label-default">实时人流量 </span>
-          <ul class="panel-tools panel-tools-hover">
-            <li><a class="icon"><i class="fa fa-refresh"></i></a></li>
-            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-          </ul>
-        </div>
-        <div class="panel-body">
-
-          <ul class="widget-inline-list clearfix">
-            <li class="col-3 color10"><span>13000</span>总人数</li>
-            <li class="col-3"><span>72%</span>青年</li>
-            <li class="col-3 color7"><span>20%</span>儿童</li>
-            <li class="col-3"><span>8%</span>老年</li>
-          </ul>
-
-          <div id="realtime" class="flotchart-placeholder" style="height:190px;"></div>
-
-        </div>
-      </div>
-    </div>
-    <!-- End Server Status -->
-
-  </div>
-  <!-- End Second Row -->
-
-
-  <!-- Start Fifth Row -->
-  <div class="row">
-
-
-    <!-- Start Project Stats -->
-    <div class="col-md-12 col-lg-12">
-      <div class="panel panel-widget">
-        <div class="panel-title">
-          景区人流量预警<span class="label label-info">5</span>
-          <ul class="panel-tools">
-            <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-            <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-            <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-          </ul>
-        </div>
-
-        <div class="panel-search">
-          <form>
-            <input type="text" class="form-control" placeholder="Search...">
-            <i class="fa fa-search icon"></i>
-          </form>
-        </div>
-
-
-        <div class="panel-body table-responsive">
-
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <td>景区ID</td>
-                <td>景区名</td>
-                <td>状态</td>
-                <td class="text-right">趋势</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>965</td>
-                <td>银子岩</td>
-                <td><span class="label label-default">普通</span></td>
-                <td class="text-right"><span class="demo-project-stats"></span></td>
-              </tr>
-              <tr>
-                <td>620</td>
-                <td>印象刘三姐</td>
-                <td><span class="label label-warning">警告</span></td>
-                <td class="text-right"><span class="demo-project-stats"></span></td>
-              </tr>
-              <tr>
-                <td>621</td>
-                <td>遇龙河</td>
-                <td><span class="label label-info">良好</span></td>
-                <td class="text-right"><span class="demo-project-stats"></span></td>
-              </tr>
-              <tr>
-                <td>624</td>
-                <td>西街</td>
-                <td><span class="label label-danger">危险</span></td>
-                <td class="text-right"><span class="demo-project-stats"></span></td>
-              </tr>
-              <tr>
-                <td>639</td>
-                <td>兴坪</td>
-                <td><span class="label label-primary">拥挤</span></td>
-                <td class="text-right"><span class="demo-project-stats"></span></td>
-              </tr>
-            </tbody>
-          </table>
-
-        </div>
-      </div>
-    </div>
-    <!-- Start Project Stats -->
+</div>
+ <div class="container-padding">
 
 
 
   </div>
-  <!-- End Fifth Row -->
+  <!-- End Row -->
 
 
 

@@ -151,28 +151,26 @@
 <div class="container-widget">
 
  <div class="container-padding">
-
-
-
+<h1 class="title">请填写训练参数</h1>
   <!-- Start Row -->
   <div class="col-md-12">
     <div class="panel panel-default">
         <div class="panel-title">参数选择</div>
             <div class="panel-body">
 			
-                <form action="train" method="post">
+                <form action="trainModel" method="post">
                   <div class="controls">
-                    	推荐个数：<input class="form-control input-lg" type="text" ><br>
-               			ratings路径： <input class="form-control input-lg" type="text" ><br>
-                		movies路径：<input class="form-control input-lg" type="text" ><br>
-                        ranks: <select class="form-control input-lg" >
-                      				<option value="">rank</option>
+                    	推荐个数：<input class="form-control input-lg" type="text" name="num"><br>
+               			ratings路径： <input class="form-control input-lg" type="text" name="ratingsPath"><br>
+                		scenic路径：<input class="form-control input-lg" type="text" name="scenicPath"><br>
+                        ranks: <select class="form-control input-lg" name="ranks" id="ranks">
+                      				<option value="ranks">8-12</option>
                    			   </select><br>
-                   	    lambdas:<select class="form-control input-lg" >
-                      				<option value="">lambdas</option>
+                   	    lambdas:<select class="form-control input-lg" name="lambdas" id="lambdas">
+                      				<option value="lambdas">0.1-10.0</option>
                    			    </select><br>
-                  		 numIters: <select class="form-control input-lg" >
-                      					<option value="">numIters</option>
+                  		 numIters: <select class="form-control input-lg" name="numIters" id="numIters">
+                      					<option value="numIters"> 10-20</option>
                    				 </select><br>
                    				 <button type="submit" class="btn btn-default">训练</button>  
                   </div>
@@ -183,41 +181,6 @@
     </div>
     </div>
   <!-- End Row -->
-
-
-
-  <!-- Start Row -->
-  <div class="row">
-
-    <!-- Start Panel -->
-    <!-- End Panel -->
-
-    <!-- Start Panel -->
-    <div class="col-md-12 col-lg-12">
-      <div class="panel">
-
-        <div class="panel-title">
-          ALS训练进度
-        </div>
-
-        <div class="panel-body">
-
-            <div class="progress progress-striped active">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                <span class="sr-only">60% Complete</span>
-              </div>
-            </div>
-
-        </div>
-
-      </div>
-    </div>
-    <!-- End Panel -->
-
-
-  </div>
-  <!-- End Row -->
-
 
 
 

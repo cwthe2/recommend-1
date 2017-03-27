@@ -72,7 +72,7 @@
 
 <ul class="sidebar-panel nav">
 
-  <li><a href="test"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
+  <li><a href="recommendIndex"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
   <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>模型训练<span class="caret"></span></a>
     <ul>
       <li><a href="progress-bars" >ALS</a></li>
@@ -85,7 +85,7 @@
     
     </ul>
   </li>
-  <li><a href="test"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
+  <li><a href="#"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
   <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>推荐<span class="caret"></span></a>
     <ul>
       <li><a href="scenicList">景区</a></li>

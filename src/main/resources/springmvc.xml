@@ -22,9 +22,9 @@
 	<!-- 直接转发的界面11 ,无需经过Handle-->
 	<mvc:view-controller path="/index" view-name="index" />
 	<mvc:view-controller path="/progress-bars" view-name="progress-bars" />
-	<mvc:view-controller path="/listScenic" view-name="listScenic" />
-	<mvc:view-controller path="/upload.do" view-name="upload" />
-	<mvc:view-controller path="/add.do" view-name="addSubjectAndScenic" />
+	
+	<mvc:view-controller path="/load" view-name="load" />
+	<mvc:view-controller path="/test" view-name="test" />
 	<mvc:view-controller path="/scenic.do" view-name="addScenic" />
 	<mvc:view-controller path="/subject.do" view-name="addSubject" />
     <mvc:view-controller path="/login.do" view-name="login" />
@@ -33,6 +33,7 @@
 	 <!-- 过滤静态资源 -->
 	<mvc:resources location="/public/" mapping="/public/**" />
 	<mvc:resources location="/dataView/" mapping="/dataView/**" />
+	<mvc:resources location="/loading/" mapping="/loading/**" />
 	
 	<!-- Spring MVC注解功能 -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">

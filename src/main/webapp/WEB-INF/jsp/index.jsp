@@ -26,7 +26,7 @@
     
     <div id="tip"></div>
     <div class="foot">
-	Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+	Copyright &copy; 2017.Guangxi University All rights reserved.
     </div>
     </form>
 </div>

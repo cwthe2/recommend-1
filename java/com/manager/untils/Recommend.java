@@ -1,6 +1,7 @@
 package com.manager.untils;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
@@ -49,7 +50,7 @@ import scala.Tuple2;
 public class Recommend  implements Serializable{
 	
 	// 初始化 Spark
-		static SparkConf conf = new SparkConf().setAppName("MovieRecommendation").setMaster("local");
+		static SparkConf conf = new SparkConf().setAppName("MovieRecommendation").setMaster("local[4]");
 		public static JavaSparkContext sc = new JavaSparkContext(conf);
 		
 		JavaRDD<Rating> training =null;
@@ -207,9 +208,12 @@ public class Recommend  implements Serializable{
 	//保存模型未写
 	public MatrixFactorizationModel trainModel(JavaRDD<Rating> training,JavaRDD<Rating> validation,int[] ranks,
 			float[] lambdas,int[] numIters,String modelSavePath){
-		MatrixFactorizationModel sameModel = MatrixFactorizationModel.load(sc.sc(),
-				  modelSavePath);
-		if(sameModel!=null){
+
+		File f=new File("hdfs://172.18.16.237:9000//user/fansy");
+		File[] len=f.listFiles();
+		if(len!=null){                     //判断该目录下是否有文件
+			MatrixFactorizationModel sameModel = MatrixFactorizationModel.load(sc.sc(),
+					  modelSavePath);
 			System.out.println("进入已经训练的模型");
 			return sameModel;
 		}

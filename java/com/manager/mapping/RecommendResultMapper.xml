@@ -6,6 +6,7 @@
     <result column="uid" property="uid" jdbcType="INTEGER" />
     <result column="rid" property="rid" jdbcType="INTEGER" />
     <result column="rating" property="rating" jdbcType="DOUBLE" />
+    
   </resultMap>
   <sql id="Base_Column_List" >
     id, uid, rid, rating
@@ -79,4 +80,9 @@
       rating = #{rating,jdbcType=DOUBLE}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+ <select id="selectMoviesByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select * from recommendresult where uid =#{id,jdbcType=INTEGER}
+  </select>
+  
 </mapper>

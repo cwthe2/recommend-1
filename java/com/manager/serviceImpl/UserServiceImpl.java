@@ -22,6 +22,7 @@ private UserMapper umapper;
 	}
 	public User findbyname(String username) {
 		// TODO Auto-generated method stub
+		System.out.println("serviceImp");
 		return umapper.selectByname(username);
 	}
 

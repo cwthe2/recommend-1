@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -152,17 +153,14 @@
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
 <div class="container-widget">
-<h1 class="title">景区展示</h1>
-<h1 class="title">景区展示</h1>
-<h1 class="title">景区展示</h1>
-<h1 class="title">景区展示</h1>
+<h1 class="title">推荐结果</h1>
+<h1 class="title">景区</h1>
 <div id="LoopDiv">
 	<input id="S_Num" type="hidden" value="8" />
 	<div id="starsIF" class="imageflow"> 
-		<img src="${pageContext.request.contextPath}/dataView/imgFlow/images/1.png" longdesc="#" width="280" height="300" alt="Picture" /> 
-		<img src="${pageContext.request.contextPath}/dataView/imgFlow/images/2.png" longdesc="#" width="280" height="300" alt="Picture" /> 
-		<img src="${pageContext.request.contextPath}/dataView/imgFlow/images/1.png" longdesc="#" width="280" height="300" alt="Picture" /> 
-		<img src="${pageContext.request.contextPath}/dataView/imgFlow/images/5.png" longdesc="#" width="280" height="300" alt="Picture" /> 
+		<c:forEach items="${urlList}" var="v">
+		<img src="${v}" longdesc="#" width="280" height="300" alt="Picture" /> 
+		</c:forEach>
 	</div>
 </div>
 <div class="clear"></div>
