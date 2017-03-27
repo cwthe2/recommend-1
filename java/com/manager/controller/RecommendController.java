@@ -29,6 +29,8 @@ public class RecommendController {
 	@Autowired
 	private RecommendService rservice;
 	
+	
+	
 	@RequestMapping("scenicList")
 	public String listScenic(HttpServletRequest request,HttpSession session){
 		System.out.println("userid:"+session.getAttribute("userid"));

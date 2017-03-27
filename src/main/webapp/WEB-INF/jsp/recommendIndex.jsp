@@ -25,7 +25,7 @@
 
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="#" class="logo">大数据管理系统</a>
+      <a href="test" class="logo">大数据管理系统</a>
     </div>
     <!-- End App Logo -->
 

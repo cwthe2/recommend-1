@@ -15,7 +15,9 @@
 
 <div class="login">
 <form action="login" method="post" id="form">
-	<div class="logo"></div>
+	
+	<div align="center"><font size="46px" color="white" face="微软雅黑">大数据后台管理系统</font></div>
+	<br>
     <div class="login_form">
     	<div class="user">
         	<input class="text_value" value="" name="username" type="text" id="username">

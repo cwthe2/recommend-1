@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+    pageEncoding="utf-8" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +25,7 @@
 
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="index.html" class="logo">大数据管理系统</a>
+      <a href="test" class="logo">大数据管理系统</a>
     </div>
     <!-- End App Logo -->
 
@@ -72,7 +72,7 @@
 
 <ul class="sidebar-panel nav">
 
-  <li><a href="#"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
+  <li><a href="test"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
   <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>模型训练<span class="caret"></span></a>
     <ul>
       <li><a href="trainALS">ALS</a></li>
@@ -85,10 +85,10 @@
     
     </ul>
   </li>
-  <li><a href="#"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
+  <li><a href="test"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
   <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>推荐<span class="caret"></span></a>
     <ul>
-      <li><a href="listScenic">景区</a></li>
+      <li><a href="scenicList">景区</a></li>
       <li><a href="#">商品</a></li>
       <li><a href="#">路线</a></li>
       <li><a href="#">想结识的人</a></li>
@@ -151,9 +151,12 @@
 <div class="container-widget">
 
  <div class="container-padding">
-<h1 class="title">请填写训练参数</h1>
+
+
   <!-- Start Row -->
   <div class="col-md-12">
+  <h1 class="title"> &nbsp;  &nbsp; </h1>
+
     <div class="panel panel-default">
         <div class="panel-title">参数选择</div>
             <div class="panel-body">

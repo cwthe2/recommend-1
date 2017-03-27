@@ -29,7 +29,7 @@
 
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="index.html" class="logo">大数据管理系统</a>
+      <a href="test" class="logo">大数据管理系统</a>
     </div>
     <!-- End App Logo -->
 
@@ -76,7 +76,7 @@
 
 <ul class="sidebar-panel nav">
 
-  <li><a href="#"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
+  <li><a href="test"><span class="icon color5"><i class="fa fa-home"></i></span>主页</a></li>
   <li><a href="#"><span class="icon color7"><i class="fa fa-flask"></i></span>模型训练<span class="caret"></span></a>
     <ul>
       <li><a href="trainALS">ALS</a></li>
@@ -89,10 +89,10 @@
     
     </ul>
   </li>
-  <li><a href="#"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
+  <li><a href="test"><span class="icon color8"><i class="fa fa-bar-chart"></i></span>数据监控</a></li>
   <li><a href="#"><span class="icon color9"><i class="fa fa-th"></i></span>推荐<span class="caret"></span></a>
     <ul>
-      <li><a href="listScenic">景区</a></li>
+      <li><a href="scenicList">景区</a></li>
       <li><a href="#">商品</a></li>
       <li><a href="#">路线</a></li>
       <li><a href="#">想结识的人</a></li>
@@ -154,7 +154,9 @@
 <!-- START CONTAINER -->
 <div class="container-widget">
 <h1 class="title">推荐结果</h1>
-<h1 class="title">景区</h1>
+<h1 class="title"> &nbsp;  &nbsp; </h1>
+<h1 class="title"> &nbsp;  &nbsp; </h1>
+<h1 class="title"> &nbsp;  &nbsp; </h1>
 <div id="LoopDiv">
 	<input id="S_Num" type="hidden" value="8" />
 	<div id="starsIF" class="imageflow"> 
