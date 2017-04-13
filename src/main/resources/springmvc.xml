@@ -27,14 +27,15 @@
 	<mvc:view-controller path="/test" view-name="test" />
 	<mvc:view-controller path="/404.jsp" view-name="404.jsp" />
 	<mvc:view-controller path="/500.jsp" view-name="500.jsp" />
-    <mvc:view-controller path="/login.do" view-name="login" />
+    <mvc:view-controller path="/show" view-name="show" />
+     <mvc:view-controller path="/show2" view-name="show2" />
 
     
 	 <!-- 过滤静态资源 -->
 	<mvc:resources location="/public/" mapping="/public/**" />
 	<mvc:resources location="/dataView/" mapping="/dataView/**" />
 	<mvc:resources location="/loading/" mapping="/loading/**" />
-	
+	<mvc:resources location="/show/" mapping="/show/**" />
 	<!-- Spring MVC注解功能 -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		

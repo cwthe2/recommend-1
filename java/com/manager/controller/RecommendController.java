@@ -49,6 +49,13 @@ public class RecommendController {
 	@RequestMapping(value="/trainModel",method=RequestMethod.POST)
 	public String train(HttpServletRequest request,HttpSession session){
 		
+		
+		
+		int uid=Integer.parseInt(session.getAttribute("userid").toString());
+		System.out.println("用户ID为"+uid);
+		if(uid==0){
+			uid=1;
+		}
 		//int num=Integer.parseInt(request.getParameter("numResult").toString());
 		int num=Integer.parseInt(request.getParameter("num"));
 		String rank=request.getParameter("ranks");
@@ -70,7 +77,7 @@ public class RecommendController {
 			recommend.splitData(ratingsPath, scenicPath);
 			List<Rating> result=new ArrayList<Rating>();
 			System.out.println("session.getAttribute(userid):"+session.getAttribute("userid"));
-			result=recommend.recommendationsResult(Integer.parseInt(session.getAttribute("userid").toString()), sameModel, recommend.getRatings(),
+			result=recommend.recommendationsResult(uid, sameModel, recommend.getRatings(),
 															recommend.getProducts(), num);
 /*			
 			//推荐结果插入数据库
@@ -120,7 +127,7 @@ public class RecommendController {
 			System.out.println("bestModel:"+bestModel);
 			System.out.println("ratings:"+recommend.getRatings());
 			System.out.println("product:"+recommend.getProducts());
-			result=recommend.recommendationsResult(Integer.parseInt(session.getAttribute("userid").toString()), bestModel, recommend.getRatings(),
+			result=recommend.recommendationsResult(uid, bestModel, recommend.getRatings(),
 															recommend.getProducts(), num);
 			
 			
